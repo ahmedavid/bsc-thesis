@@ -1,0 +1,44 @@
+[
+  {
+    "Username":"doctor1",
+    "Password": "password",
+    "IsBookee":true,
+    "Fullname":"Doctor Smith",
+    "Email":"drsmith@clinic.com",
+    "SpecialityId":1,
+    "Description": "The cardiologist is a specialist in the heart and its pathologies as well as vascular problems. You can consult it in case of heart failure, pericarditis or more generally abnormal breathlessness, palpitations or chest pain."
+  },
+  {
+    "Username":"doctor4",
+    "Password": "password",
+    "IsBookee":true,
+    "Fullname":"Dr. Laila BESSON HAJJI",
+    "Email":"laila.hajji@telemedic.com",
+    "SpecialityId":1,
+    "Description": "Dr. Laila Besson-Hajji receives you in cardiology at the Clinique du Mont Louis in the 11th arrondissement of Paris. Cardiologist and vascular doctor, she can receive you for cardiac and vascular ultrasound consultations and explorations. The technical platform of the Mont Louis Clinic in cardiology includes: - An echocardiograph and a stress table for the performance of stress and stress ultrasounds (Dobutamine tests) - The ultrasound system is equipped with specific vascular probes enabling the realization of vascular dopplers. The cardiologist is a specialist in the heart and vascular diseases. You can consult it in case of heart failure, pericarditis or more generally abnormal breathlessness."
+  },
+  {
+    "Username":"doctor2",
+    "Password": "password",
+    "IsBookee":true,
+    "Fullname":"Doctor Brown",
+    "Email":"drbrown@clinic.com",
+    "SpecialityId":2
+  },
+  {
+    "Username":"doctor3",
+    "Password": "password",
+    "IsBookee":true,
+    "Fullname":"Nagy Zoltan",
+    "Email":"nagy.zoltan@clinic.com",
+    "SpecialityId":3
+  },
+  {
+    "Username":"david",
+    "Password": "password",
+    "IsBookee":false,
+    "Fullname":"David Ahmadov",
+    "Email":"ahmedavid@gmail.com",
+    "SpecialityId":4
+  }
+]

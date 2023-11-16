@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>My Consultation ID{{bookingId}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+
+      <ion-col>
+        <ion-card class="ion-padding" [ngClass]="{'bg-online':patient?.status === 0,'bg-offline':patient?.status === 1}">
+          <ion-label color="light">
+            Patient: {{patient?.given_name}}
+          </ion-label>
+        </ion-card>
+      </ion-col>
+
+      <ion-col>
+        <ion-card class="ion-padding" [ngClass]="{'bg-online':doctor?.status === 0,'bg-offline':doctor?.status === 1}">
+            <ion-label color="light">
+              Doctor: {{doctor?.given_name}}
+            </ion-label>
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+
+    
+    <ion-row>
+      <ion-col>
+        <div class="chat-container" #chatContainer>
+            <ion-card *ngFor="let message of messages" class="ion-padding" [class]="getTextAlignment(message)">
+              <ion-note>{{message.text}}</ion-note>
+              <br>
+              <ion-label>{{getTime(message.timestamp)}}</ion-label>
+            </ion-card>          
+        </div>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <form #chatForm="ngForm" (ngSubmit)="sendMessage()">
+      <ion-item lines="none">
+        <ion-input #messageInput name="message" [(ngModel)]="message" placeholder="Type a message" required></ion-input>
+        <ion-button type="submit"><ion-icon slot="end" slot="icon-only" name="send"></ion-icon></ion-button>
+      </ion-item>
+    </form>
+  </ion-toolbar>
+</ion-footer>

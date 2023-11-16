@@ -1,0 +1,6 @@
+D:\Projects\dotnet\telemedic-thesis\webapi\obj\Debug\net6.0\webapi.csproj.AssemblyReference.cache
+D:\Projects\dotnet\telemedic-thesis\webapi\obj\Debug\net6.0\webapi.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\dotnet\telemedic-thesis\webapi\obj\Debug\net6.0\webapi.AssemblyInfoInputs.cache
+D:\Projects\dotnet\telemedic-thesis\webapi\obj\Debug\net6.0\webapi.AssemblyInfo.cs
+D:\Projects\dotnet\telemedic-thesis\webapi\obj\Debug\net6.0\webapi.csproj.CoreCompileInputs.cache
+D:\Projects\dotnet\telemedic-thesis\webapi\obj\Debug\net6.0\webapi.MvcApplicationPartsAssemblyInfo.cache

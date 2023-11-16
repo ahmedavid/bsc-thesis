@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Calling {{peer.fullname}} ({{timeString}})
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="padding">
+    <div class="video-container-parent">
+      <div class="video-container">
+          <ion-text color="light" class="remote-user">
+            
+          </ion-text>
+        <video #remoteVideo id="remoteVideo" autoplay muted style="width: 100%;"></video>
+      </div>
+      <div class="video-container local-video">
+          <ion-text color="light" class="local-user">
+            
+          </ion-text>
+        <video #localVideo id="localVideo" autoplay muted style="width: 100%;"></video>
+      </div>
+    </div>
+
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button color="danger" (click)="endCall()">
+      <ion-icon name="call"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

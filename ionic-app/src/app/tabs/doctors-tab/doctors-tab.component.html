@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Our Doctors
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+  
+  <ion-content class="ion-no-padding">
+      <ion-card class="welcome-card ion-no-padding ion-no-margin">
+        <ion-card-header>
+          <!-- <ion-card-subtitle>Get Started</ion-card-subtitle>
+          <ion-card-title>Search For Doctor</ion-card-title> -->
+          <ion-searchbar placeholder="Dr John Doe Md." (ionChange)="onChange($event)" (ionCancel)="onClear($event)" (ionClear)="onClear($event)"></ion-searchbar>
+          <!-- <ion-label class="ion-text-center">Speciality</ion-label> -->
+          <ion-select interface="popover" [(ngModel)]="selectedSpeciality">
+            <ion-select-option>-- Select Speciality --</ion-select-option>
+            <ion-select-option *ngFor="let spec of specs">{{spec.name}}</ion-select-option>
+          </ion-select>
+
+          <ion-item>
+            <ion-label position="floating">Location</ion-label>
+            <ion-input placeholder="Budapest, Hungary"></ion-input>
+          </ion-item>
+        </ion-card-header>
+        <ion-card-content class="ion-no-padding">
+          <ion-list lines="none" *ngIf="getFilteredDoctors().length > 0">
+            <ion-list-header>
+              <ion-label>Our Doctors</ion-label>
+            </ion-list-header>
+            <ion-item *ngFor="let doctor of getFilteredDoctors()" [routerLink]="[doctor.id]" routerLinkActive="router-link-active">
+              <ion-avatar slot="start">
+                <img [src]="doctor.photos[0].url">
+              </ion-avatar>
+              <ion-label>{{doctor.fullname}}</ion-label>
+              <ion-badge>{{doctor.speciality.name}}</ion-badge>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+  </ion-content>
+  

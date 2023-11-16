@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>My Bookings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  
+  <ion-card *ngFor="let booking of getUserDisplayData()">
+    <ion-card-header>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="{{booking.photoUrl}}"/>
+        </ion-avatar>
+        <ion-label>
+          <h2>{{booking.fullname}}</h2>
+          <p>{{booking.speciality}}</p>
+        </ion-label>
+        <ion-button slot="end" (click)="startConsultation(booking)">Start</ion-button>
+        <ion-button color="danger" slot="end" (click)="cancelConsultation(booking)">Cancel</ion-button>
+      </ion-item>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-label>
+                <h3>Starts</h3>
+                <ion-datetime displayFormat="D MMM YYYY H:mm" min="2018" max="2022" value="{{booking.startTime}}"></ion-datetime>
+            </ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>
+                <h3>Ends</h3>
+                <ion-datetime displayFormat="D MMM YYYY H:mm" min="2018" max="2022" value="{{booking.endTime}}"></ion-datetime>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

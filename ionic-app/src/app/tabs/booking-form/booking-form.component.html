@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+      <!-- <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons> -->
+    <ion-title>Schedule Consultation Time</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onClose()">Cancel</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <form [formGroup]="scheduleForm" (ngSubmit)="onSchedule($event)">
+        <ion-item>
+          <ion-label position="floating">Subject</ion-label>
+          <ion-input formControlName="subject"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Description</ion-label>
+          <ion-input formControlName="description"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Start Time</ion-label>
+          <ion-input formControlName="startTime"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">End Time</ion-label>
+          <ion-input formControlName="endTime"></ion-input>
+        </ion-item>
+        <ion-row>
+          <ion-col>
+            <ion-button expand="block" class="ion-margin-top" color="light" type="button" (click)="onClose()">Cancel</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button [disabled]="!scheduleForm.valid" expand="block" class="ion-margin-top" type="submit">Submit</ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

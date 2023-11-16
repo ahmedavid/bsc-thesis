@@ -1,0 +1,14 @@
+/home/david/Projects/telemedic-thesis/webapi/bin/Debug/netcoreapp2.2/webapi.deps.json
+/home/david/Projects/telemedic-thesis/webapi/bin/Debug/netcoreapp2.2/webapi.runtimeconfig.json
+/home/david/Projects/telemedic-thesis/webapi/bin/Debug/netcoreapp2.2/webapi.runtimeconfig.dev.json
+/home/david/Projects/telemedic-thesis/webapi/bin/Debug/netcoreapp2.2/webapi.dll
+/home/david/Projects/telemedic-thesis/webapi/bin/Debug/netcoreapp2.2/webapi.pdb
+/home/david/Projects/telemedic-thesis/webapi/obj/Debug/netcoreapp2.2/webapi.csprojAssemblyReference.cache
+/home/david/Projects/telemedic-thesis/webapi/obj/Debug/netcoreapp2.2/webapi.csproj.CoreCompileInputs.cache
+/home/david/Projects/telemedic-thesis/webapi/obj/Debug/netcoreapp2.2/webapi.RazorAssemblyInfo.cache
+/home/david/Projects/telemedic-thesis/webapi/obj/Debug/netcoreapp2.2/webapi.RazorAssemblyInfo.cs
+/home/david/Projects/telemedic-thesis/webapi/obj/Debug/netcoreapp2.2/webapi.AssemblyInfoInputs.cache
+/home/david/Projects/telemedic-thesis/webapi/obj/Debug/netcoreapp2.2/webapi.AssemblyInfo.cs
+/home/david/Projects/telemedic-thesis/webapi/obj/Debug/netcoreapp2.2/webapi.RazorTargetAssemblyInfo.cache
+/home/david/Projects/telemedic-thesis/webapi/obj/Debug/netcoreapp2.2/webapi.dll
+/home/david/Projects/telemedic-thesis/webapi/obj/Debug/netcoreapp2.2/webapi.pdb

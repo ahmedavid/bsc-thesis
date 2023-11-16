@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Welcome to Telemedic</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-segment (ionChange)="segmentChanged($event)" [value]="selectedSegment">
+        <ion-segment-button value="login">
+          <ion-label>Login</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="register">
+          <ion-label>Register</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-card-header>
+    <ion-card-content>
+      <app-login *ngIf="selectedSegment === 'login'"></app-login>
+      <app-register *ngIf="selectedSegment === 'register'"></app-register>
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>

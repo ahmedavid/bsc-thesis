@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      {{doctor.fullname}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-no-padding">
+    <ion-card class="welcome-card ion-no-padding">
+      <ion-card-header>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-row>
+          <ion-col size="auto">
+            <ion-avatar>
+              <img src="{{doctor?.photos[0].url}}">
+            </ion-avatar>
+          </ion-col>
+          <ion-col>
+              <ion-card-title>{{doctor?.fullname}}</ion-card-title>
+              <ion-card-subtitle>{{doctor?.speciality?.name}}</ion-card-subtitle>
+              <ion-note>{{doctor?.description}}</ion-note>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- <ion-card>
+      <ion-card-header>
+        Schedule
+      </ion-card-header>
+      <ion-card-content>
+        <ejs-schedule startHour="09:00" [endHour]="'20:00'" [firstDayOfWeek]="1" [eventSettings]="eventSettings"></ejs-schedule>
+      </ion-card-content>
+    </ion-card> -->
+    <div class="calendar-container">
+      <div class="card-container-header">
+        <ion-label>Schedule</ion-label>
+      </div>
+      <calendar [eventSource]="eventSource" [autoSelect]="false" [startingDayWeek]="1"
+      [calendarMode]="calendar.mode"
+      [currentDate]="calendar.currentDate"
+      (onCurrentDateChanged)="onCurrentDateChanged($event)"
+      (onEventSelected)="onEventSelected($event)"
+      (onTitleChanged)="onViewTitleChanged($event)"
+      (onTimeSelected)="onTimeSelected($event)"
+      step="60">
+    </calendar>
+    </div>
+</ion-content>

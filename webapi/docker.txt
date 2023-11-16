@@ -1,0 +1,16 @@
+dotnet publish -c Release
+
+FROM microsoft/dotnet:2.2-aspnetcore-runtime
+WORKDIR /app
+COPY . .
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet webapi.dll
+
+docker build -t webapi ./bin/release/netcoreapp2.2/publish
+heroku login
+heroku container:login
+
+docker tag webapi registry.heroku.com/telemedic-webapi/web
+
+docker push registry.heroku.com/telemedic-webapi/web
+
+heroku container:release web -a telemedic-webapi

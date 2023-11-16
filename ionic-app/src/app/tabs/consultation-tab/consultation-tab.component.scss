@@ -1,0 +1,40 @@
+ion-content{
+  --ion-background-color:rgb(255, 248, 184);
+  overflow-y: scroll;
+  max-height: 500px;
+}
+.bg-dark {
+  background-color: rgb(164, 255, 146);
+}
+
+.bg-light {
+  background-color: #fff;
+}
+
+.text-right {
+  float: right;
+  text-align: right;
+}
+.text-left {
+  float: left;
+}
+
+ion-card {
+  max-width: 80%;
+  clear: both;
+  margin-top: 0;
+}
+
+ion-card:first-child {
+  margin-top: 10px;
+}
+ion-card:last-child {
+  margin-bottom: 20px;
+}
+
+.bg-online {
+  background: #28e070;
+}
+.bg-offline {
+  background: #f25454;
+}
