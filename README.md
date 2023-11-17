@@ -13,5 +13,6 @@
 3. Signalling is used to provide initial signalig that is necessary for WebRTC calls. After call is established , webrtc uses p2p channels to perform calls.
 
 Additional technical details are disscussed in the thesis writeup.
+[a link](David Ahmadov Bsc Thesis - Development of mobile application for medical practice management.pdf)
 
 ![Alt text](telemedic-architecture.png?raw=true "Telemedic Communication Architecture")
