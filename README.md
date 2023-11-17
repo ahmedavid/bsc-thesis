@@ -14,6 +14,6 @@
 
 Additional technical details are disscussed in the thesis writeup.
 
-[a relative link] (David Ahmadov Bsc Thesis - Development of mobile application for medical practice management.pdf)
+David Ahmadov Bsc Thesis - Development of mobile application for medical practice management.pdf
 
 ![Alt text](telemedic-architecture.png?raw=true "Telemedic Communication Architecture")
